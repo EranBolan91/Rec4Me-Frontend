@@ -1,6 +1,7 @@
 import Chart from "../../chart/Chart";
 import Sidebar from "../../sidebar/SideBarForAdmin";
 import Topbar from "../../topbar/TopBarForAdmin";
+import { useNavigate  } from 'react-router-dom';
 import "./Summery.css";
 import { questionnaire1,
          questionnaire2,
@@ -8,7 +9,10 @@ import { questionnaire1,
          questionnaire4,
          questionnaire5 } from "../../../dummyData";
 
-export default function Home() {
+export default function Home({ route }) {
+  // Here somehow we need to get the 'companyID' and pass it to other pages
+  // const { companyID } = route.params;
+  // console.log(companyID);
   return (
     <>
         <Topbar />

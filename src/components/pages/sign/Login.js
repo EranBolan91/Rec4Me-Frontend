@@ -4,7 +4,6 @@ import Button from '@material-ui/core/Button';
 import LoginIcon from '@material-ui/icons/AccountCircle';
 import axios from 'axios';
 import Navbar from "../../navbar/Navbar";
-import { ThemeProvider } from "@material-ui/core";
 import { useNavigate  } from 'react-router-dom';
 
 export default function LogIn(){
@@ -18,7 +17,7 @@ export default function LogIn(){
             axios.post('/log-in', {companyID: companyID, companyPassword: companyPassword}).then(res =>{
             localStorage.setItem('token', res.data.token);
             if(res.status === 200){
-                navigate("/admin");
+                navigate("/admin", {companyID: companyID}); // passing company id to admin page
             }else if (res.status === 400){
                 console.log("duplicate ID");
             }

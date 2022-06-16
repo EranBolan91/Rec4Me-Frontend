@@ -11,21 +11,6 @@ function Navbar() {
   const handleClick = () => setClick(!click); /* function that toggles the click event */
   const closeMobileMenu = () => setClick(false); /* same as above */
 
-  // const showbutton = () => { /* function that toggles the screen for mobile phones when window event listener happens */
-  //   if(window.innerWidth <= 960) {
-  //     setbutton(false);
-  //   } else {
-  //     setbutton(true);
-  //   }
-  // };
-
-  // /* so sign up wont show when window shrink after refresh */
-  // useEffect(() => {
-  //   showbutton();
-  // }, []);
-
-  // window.addEventListener('resize', showbutton); /* window event listener for mobile */
-
   return (
     <>
         <nav className='navbarr'>
